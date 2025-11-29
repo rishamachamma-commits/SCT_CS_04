@@ -1,0 +1,17 @@
+print("===== Safe Educational Keylogger =====")
+print("Type something below. Type 'exit' to stop.\n")
+
+log_file = open("keylog.txt", "a")
+
+while True:
+    user_input = input("Type here: ")
+
+    if user_input.lower() == "exit":
+        print("Keylogger stopped.")
+        break
+
+    log_file.write(user_input + "\n")
+    print("Logged:", user_input)
+
+log_file.close()
+print("All keystrokes saved in keylog.txt file.")
